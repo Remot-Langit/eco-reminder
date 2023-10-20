@@ -1,0 +1,49 @@
+ 1. Class user
+    - username
+    - nama
+    - email
+    - password
+    - no telp
+    - foto
+    +getProfile
+    +addChallange
+    +addEdukasi
+ 2. Class admin (merupakan user juga akan tetapi memiliki wewenang lebih, seperti meng-acc challange dan edukasi / ilmu pengetahuan yang di ajukan oleh user
+    - inheritance class user
+    +sendNotification
+ 3. Class profile (yang nantinya akan menjadi wadah untuk menampung entah dari data user, poin yang user dapatkan, history challange yang di lakukan oleh user, dll)
+    - nama
+    - email
+    - foto
+    - point
+    +getPoint
+    +addPoint
+    +exchange (mengubah poin menjadi voucher)
+ 4. CLass Edukasi (berguna untuk menampung ilmu atau edukasi yang berkaitan dengan iklim, dll)
+    - judul
+    - penyusun (user yang mengajukan)
+    - materi (isi materinya)
+    - referensi
+    +getJudul
+    +getPenyusun
+    +getMateri
+    +getReferensi
+ 5. Class ListEdukasi (saat ini hanya untuk menampung edukasi, mungkin kedepannya akan lebih berguna lagi
+    - listEdukasi
+    +addEdukasi
+ 6. Class Notifikasi (rencananya notifikasi akan berjalan ketika user mengajukan materi dan di acc oleh admin, maka notif akan muncul di semua pengguna baik user maupun admin
+    - judul
+    - cuplikan
+    +show
+ 7. Class Challange
+    - nama
+    - deskripsi
+    - jumlahHari (target melakukan challange tersebut mau berapa hari)
+    - start (ketika user mulai)
+    - current (hari sekarang)
+    - point (poin yang didapatkan)
+    +getPoint
+ 8. Class ListChallange
+    - listChallange
+    +addChallange
+ 9. Class Capaian (merupakan Resume dari Challange yang sudah /sedang dikerjakan user)
