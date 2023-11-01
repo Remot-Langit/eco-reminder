@@ -14,4 +14,8 @@ public class Notifikasi {
         System.out.println("----------------");
         System.out.println(this.cuplikan);
     }
+
+    public void sendNotification() {
+        //TODO
+    }
 }
