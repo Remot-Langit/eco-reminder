@@ -32,6 +32,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "*.jar"
+        file: "target/*.jar"
         tags: true
         draft: true
