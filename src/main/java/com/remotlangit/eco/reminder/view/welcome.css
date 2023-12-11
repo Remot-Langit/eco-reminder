@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+@font-face {
+    font-family: 'Jua';
+    src: url(font/Jua-Regular.ttf)
+}
+
+.judul {
+    -fx-font-family: 'Jua';
+}
