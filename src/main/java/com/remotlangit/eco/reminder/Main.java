@@ -25,7 +25,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage)throws IOException {
         
-        URL url = new File ("src/main/java/com/remotlangit/eco/reminder/view/welcome.fxml").toURI() .toURL();
+        URL url = new File ("src/main/java/com/remotlangit/eco/reminder/view/challange.fxml").toURI() .toURL();
         Parent root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
         
