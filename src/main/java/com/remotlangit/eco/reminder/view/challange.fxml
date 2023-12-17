@@ -12,7 +12,7 @@
         <URL value="@challange.css" />
     </stylesheets>
    <children>
-      <AnchorPane layoutX="57.0" layoutY="54.0" prefHeight="298.0" prefWidth="510.0" style="-fx-background-color: #FFEEC8; -fx-background-radius: 25px;">
+      <AnchorPane layoutX="57.0" layoutY="54.0" prefHeight="298.0" prefWidth="510.0" style="-fx-background-color: #EDFFC8; -fx-background-radius: 25px;">
          <children>
             <AnchorPane layoutX="38.0" layoutY="44.0" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
                <children>
