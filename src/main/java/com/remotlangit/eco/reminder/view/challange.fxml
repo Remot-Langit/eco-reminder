@@ -12,41 +12,27 @@
         <URL value="@challange.css" />
     </stylesheets>
    <children>
-      <AnchorPane layoutX="57.0" layoutY="54.0" prefHeight="298.0" prefWidth="510.0" style="-fx-background-color: #FFEEC8; -fx-background-radius: 25px;">
+      <AnchorPane layoutX="57.0" layoutY="54.0" prefHeight="298.0" prefWidth="510.0" style="-fx-background-color: #edffc8; -fx-background-radius: 25px;">
          <children>
-            <AnchorPane layoutX="38.0" layoutY="44.0" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
+            <AnchorPane layoutX="38.0" layoutY="52.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
                <children>
-                  <Text fill="WHITE" layoutX="43.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Challenge">
+                  <Text fill="WHITE" layoutX="39.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Challenge">
                      <font>
-                        <Font size="19.0" />
+                        <Font name="System Bold" size="19.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="276.0" layoutY="44.0" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
-               <children>
-                  <Text fill="WHITE" layoutX="43.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Challenge">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <Text layoutX="64.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do List:" wrappingWidth="147.6524658203125">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Text>
-            <Text layoutX="48.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Makan Makanan Sehat" wrappingWidth="212.568359375">
+            <Text layoutX="48.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="212.568359375">
                <font>
                   <Font size="19.0" />
                </font>
             </Text>
             <AnchorPane layoutX="56.0" layoutY="170.0" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
                <children>
-                  <Text fill="WHITE" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Challenge">
+                  <Text fill="WHITE" layoutX="17.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Challenge">
                      <font>
-                        <Font size="19.0" />
+                        <Font name="System Bold" size="19.0" />
                      </font>
                   </Text>
                </children>
@@ -91,6 +77,25 @@
             <Text layoutX="328.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Housing &amp; Energy" wrappingWidth="58.0" />
             <Text layoutX="398.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" wrappingWidth="27.0" />
             <Text layoutX="449.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Other" wrappingWidth="34.0" />
+            <AnchorPane layoutX="266.0" layoutY="48.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
+               <children>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Challenge">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fill="#240000" layoutX="42.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do List:">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#240000" layoutX="42.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Makan Makanan Sehat">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <ImageView fitHeight="116.0" fitWidth="200.0" layoutX="424.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
