@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #65962C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #EDFFC8;">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="109.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/profil%20admin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="41.0" layoutY="103.0" text="Welcome">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="124.0" text="Admin!">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="50.0" layoutX="108.0" layoutY="151.0" startX="-108.0" />
+            <Button layoutX="51.0" layoutY="162.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #000000; -fx-background-radius: 5;" text="Home" textFill="#fcfcfc" />
+            <Button layoutX="51.0" layoutY="200.0" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-background-radius: 5;" text="Education" textFill="#fcfcfc" />
+            <Button layoutX="52.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #000000; -fx-background-radius: 5;" text="Challange" textFill="#fcfcfc" />
+            <ImageView fitHeight="30.0" fitWidth="46.0" layoutX="8.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="46.0" layoutX="8.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/education.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="46.0" layoutX="8.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/challange.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/next.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="29.0" layoutY="355.0" mnemonicParsing="false" style="-fx-background-color: #65962C; -fx-background-radius: 10;" text="Logout" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="210.0" layoutX="275.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="306.0" layoutY="220.0" text="Welcome">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="267.0" text="Eco-Reminder">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

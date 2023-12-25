@@ -15,19 +15,19 @@
    <children>
       <AnchorPane layoutX="23.0" layoutY="22.0" prefHeight="351.0" prefWidth="559.0" style="-fx-background-image: #FFEEC8;" styleClass="mainFxmlClass">
          <children>
-            <AnchorPane layoutX="13.0" layoutY="10.0" prefHeight="328.0" prefWidth="500.0" style="-fx-background-color: #EDFFC8; -fx-background-radius: 25;">
+            <AnchorPane layoutX="27.0" layoutY="12.0" prefHeight="328.0" prefWidth="500.0" style="-fx-background-color: #EDFFC8; -fx-background-radius: 25;">
                <children>
                   <Text layoutX="73.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eco-Rimender">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text fill="#65962c" layoutX="23.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mulailah tantangan gaya hidup yang menarik!" textAlignment="CENTER" wrappingWidth="187.0">
+                  <Text fill="#65962c" layoutX="20.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mulailah tantangan gaya hidup yang menarik!" textAlignment="CENTER" wrappingWidth="187.0">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Text>
-                  <Text layoutX="221.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#Eco-RimenderChallenge. Kota anda mendukung anda dan anda akan melihat bahwa gaya hidup berkelanjutan bukanlah sebuah kerugian, namun sebuah kemenangan. Apakah anda siap? Maka anda bisa memulainya sekarang juga." textAlignment="CENTER" wrappingWidth="276.88671875">
+                  <Text layoutX="213.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mulailah #Eco-RimenderChallenge. Kota anda mendukung anda dan anda akan melihat bahwa gaya hidup berkelanjutan bukanlah sebuah kerugian, namun sebuah kemenangan. Apakah anda siap? Maka anda bisa memulainya sekarang juga." textAlignment="CENTER" wrappingWidth="291.88671875">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -40,16 +40,6 @@
                   <ImageView fitHeight="54.0" fitWidth="75.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/logo.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="81.0" fitWidth="155.0" layoutX="386.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/awan.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="81.0" fitWidth="155.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/awan.png" />
                      </image>
                   </ImageView>
                </children>

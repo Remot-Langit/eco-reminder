@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #65962C;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.remotlangit.eco.reminder.controller.Education1Controller">
+    <stylesheets>
+        <URL value="@education1.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="58.0" layoutY="59.0" prefHeight="306.0" prefWidth="484.0" style="-fx-background-color: #EDFFC8; -fx-background-radius: 25;">
+         <children>
+            <Text layoutX="184.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingkungan">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="174.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Penyusun: Rimba.com">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingkungan adalah sesuatu yang sangat dekat dengan kehidupan berdasarkan interaksi alam dengan masyarakat. Istilah ini bahkan mempunyai cakupan sangat luas seiring perkembangannya. Namun secara sederhana lingkungan berhubungan erat dengan alam dan penyusunnya." wrappingWidth="392.14453125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Line endX="234.0" layoutX="250.0" layoutY="78.0" startX="-250.0">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Line>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="45.0" fitWidth="49.0" layoutX="6.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="49.0" layoutX="549.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/next1.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="235.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDUCATION">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
