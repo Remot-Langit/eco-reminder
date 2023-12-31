@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -21,11 +24,6 @@
                 <Text fx:id="judul" layoutX="12.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingkungan" textAlignment="CENTER" wrappingWidth="461.8854064941406">
                     <font>
                         <Font name="System Bold" size="24.0" />
-                    </font>
-                </Text>
-                <Text fx:id="materi" layoutX="5.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingkungan adalah sesuatu yang sangat dekat dengan kehidupan berdasarkan interaksi alam dengan masyarakat. Istilah ini bahkan mempunyai cakupan sangat luas seiring perkembangannya. Namun secara sederhana lingkungan berhubungan erat dengan alam dan penyusunnya." wrappingWidth="474.55203247070335">
-                    <font>
-                        <Font size="14.0" />
                     </font>
                 </Text>
                 <Line endX="234.0" layoutX="250.0" layoutY="78.0" startX="-250.0">
@@ -51,6 +49,22 @@
                         <Font name="System Italic" size="16.0" />
                     </font>
                 </Text>
+            <ScrollPane hbarPolicy="NEVER" layoutX="11.0" layoutY="78.0" prefHeight="193.0" prefWidth="462.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+               <content>
+                  <VBox prefHeight="193.0" prefWidth="461.0" style="-fx-background-color: #EDFFC8;">
+                     <children>
+                            <Text fx:id="materi" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingkungan adalah sesuatu yang sangat dekat dengan kehidupan berdasarkan interaksi alam dengan masyarakat. Istilah ini bahkan mempunyai cakupan sangat luas seiring perkembangannya. Namun secara sederhana lingkungan berhubungan erat dengan alam dan penyusunnya." wrappingWidth="457.8853454589846">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Text>
+                     </children>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
             </children>
         </AnchorPane>
         <ImageView fitHeight="45.0" fitWidth="49.0" layoutX="6.0" layoutY="190.0" onMouseClicked="#prev" pickOnBounds="true" preserveRatio="true">
