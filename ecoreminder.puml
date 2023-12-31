@@ -1,0 +1,685 @@
+@startuml
+annotation java.lang.Override
+annotation javafx.fxml.FXML
+class com.remot.langit.ecoreminder.App {
+    +{static} Scene scene
+    +{static} Stage stage
+    +{static} Data data
+    +{static} void setTitle(String title)
+    +{static} void setRoot(String fxml)
+    +void start(Stage primaryStage)
+    +void main(String[] args)
+}
+class com.remot.langit.ecoreminder.controller.CapaianController implements javafx.fxml.Initializable {
+    +VBOX progresslist;
+    +VBOX finishList;
+    +void initialize()
+    +back()
+}
+class com.remot.langit.ecoreminder.controller.ChallangeAdminController implements javafx.fxml.Initializable {
+    +TextArea deskripsi
+    +ChoiceBox<String> batas_waktu
+    +TableView<Challange> table
+    +TextField nama
+    +Label name
+    +ChoiceBox<Integer> point
+    +{static} Challange challange
+    +void initialize()
+    +void getListController()
+    +void delete(Challange chal)
+    +edit (Challange chal)
+    +toHome()
+    +toEducation()
+    +submit()
+    +logout()
+}
+class com.remot.langit.ecoreminder.controller.ChallangeController implements javafx.fxml.Initializable {
+    +Text deskripsi
+    +Text batasWaktu
+    +Text point
+    +void initialize()
+    +back()
+    +start()
+}
+class com.remot.langit.ecoreminder.controller.EducationAdminController implements javafx.fxml.Initializable {
+    +TextArea materi
+    +TextField referensi
+    +TableView<Edukasi> table
+    +TextField judul
+    +Label name
+    +{static} Edukasi edu
+    +void initialize()
+    +void getEducationTable()
+    +void edit(Edukasi edukasi)
+    +void delete(Edukasi edukasi)
+    +void submit()
+    +void toHome()
+    +void toChallange()
+    +void logout()
+}
+class com.remot.langit.ecoreminder.controller.EducationController implements javafx.fxml.Initializable {
+    +Text penyusun
+    +Text materi
+    +Text judul
+    +void initialize()
+    +void back()
+    +void prev()
+    +void next()
+}
+class com.remot.langit.ecoreminder.controller.HomeAdminController implements javafx.fxml.Initializable {
+    +Label name
+    +void initialize()
+    +void toEducation()
+    +void toChallange()
+    +void logout()
+}
+class com.remot.langit.ecoreminder.controller.LamanLoginController implements javafx.fxml.Initializable {
+    +void initialize()
+    +void toLogin()
+}
+class com.remot.langit.ecoreminder.controller.ListChallangeController implements javafx.fxml.Initializable {
+    +ScrollPane containerList
+    +VBox box
+    +void initialize()
+    +void get()
+    +void back()
+    +void toChallange()
+}
+class com.remot.langit.ecoreminder.controller.ListEdukasiController implements javafx.fxml.Initializable {
+    +TableView<Edukasi> table
+    +{static} ObservableList<Edukasi> tableObservable
+    +void initialize()
+    +void getEducationTable()
+    +void back()
+}
+class com.remot.langit.ecoreminder.controller.LoginController implements javafx.fxml.Initializable {
+    +TextField username
+    +PasswordField password
+    +void initialize()
+    +void toRegister()
+    +void submit()
+}
+class com.remot.langit.ecoreminder.controller.ProfileController implements javafx.fxml.Initializable {
+    +Label nama
+    +void initialize()
+    +void switchChallange()
+    +void switchCapaian()
+    +void switchEdukasi()
+    +void switchRewards()
+    +void logout()
+}
+class com.remot.langit.ecoreminder.controller.RegisterController implements javafx.fxml.Initializable {
+    +PasswordField password
+    +TextField email
+    +TextField username
+    +TextField name
+    +void initialize()
+    +void toLogin()
+    +void submit()
+}
+class com.remot.langit.ecoreminder.controller.RewardsController implements javafx.fxml.Initializable {
+    +Text poin
+    +void initialize()
+    +void back()
+    +void toOvo()
+    +void toShopee()
+    +void toDana()
+}
+class com.remot.langit.ecoreminder.controller.WelcomeController implements javafx.fxml.Initializable {
+    +void initialize()
+    +void switchToLogin()
+}
+class com.remot.langit.ecoreminder.model.Capaian {
+    -String idChallange
+    -String namaChallange
+    -String idUser
+    -String idCapaian
+    -boolean finish
+    -Timestamp start
+    -int batasWaktu
+    -int remaining
+    +Capaian()
+    +void setIdChallange(String challange)
+    +void setNamaChallange(String namaChallange)
+    +void setIdUser(String idUser)
+    +void setIdCapaian(String idCapaian)
+    +void setFinish(boolean finish)
+    +void setStart(Timestamp start)
+    +void setBatasWaktu(int batasWaktu)
+    +void setRemaining(int remaining)
+    +String getIdChallange()
+    +String getNamaChallange()
+    +String getIdUser()
+    +String getIdCapaian()
+    +boolean isFinish()
+    +Timestamp getStart()
+    +int getBatasWaktu()
+    +int getRemaining()
+}
+class com.remot.langit.ecoreminder.model.Challange {
+    -UUID id
+    -String nama
+    -String deskripsi
+    -UUID idPembuat
+    -int jumlahHari
+    -int point
+    +Challange()
+    +UUID getId()
+    +String getNama()
+    +String getDeskripsi()
+    +UUID getIdPembuat()
+    +int getJumlahHari()
+    +int getPoint()
+}
+class com.remot.langit.ecoreminder.model.Edukasi {
+    -UUID id
+    -String judul
+    -UUID idPenyusun
+    -String materi
+    -String cuplikan
+    -string referensi
+    +Edukasi()
+    +UUID getId()
+    +String getJudul()
+    +UUID getIdPenyusun()
+    +String getMateri()
+    +String getReferensi()
+    +String getCuplikan()
+}
+class com.remot.langit.ecoreminder.model.User {
+    -String username
+    -String password
+    -String email
+    -String nama
+    -UUID id
+    +User()
+    +String getUsername()
+    +String getPassword()
+    +String getEmail()
+    +String getNama()
+    +UUID getId()
+}
+class com.remot.langit.ecoreminder.model.UserAdmin extends com.remot.langit.ecoreminder.model.User {
+    +UserAdmin()
+}
+class com.remot.langit.ecoreminder.model.UserMember extends com.remot.langit.ecoreminder.model.User {
+    -int point
+    -{static} CapaianDAO dao
+    -ArrayList<Capaian> capaian
+    +UserMember()
+    +addCapaian(Challange challange)
+    +void setPoint(int point)
+    +void addPoint(int point)
+    +int getPoint()
+}
+class com.remot.langit.ecoreminder.utils.CapaianDAO extends com.remot.langit.ecoreminder.utils.Database {
+    +void create()
+    +void insert(UserMember user, Challange challange)
+    +ArrayList<Capaian> searchByUserId(String id)
+    +int getPoint(UserMember user)
+}
+class com.remot.langit.ecoreminder.utils.ChallangeDAO extends com.remot.langit.ecoreminder.utils.Database {
+    +void create()
+    +void insert(Challange challange)
+    +void update(Challange challange)
+    +Challange searchById(String id)
+    +ArrayList<Challange> getAll()
+    +ArrayList<Challange> getAllUnselected(Usermember user)
+    +delete(Challange challange)
+}
+class com.remot.langit.ecoreminder.utils.Data<T extends com.remot.langit.ecoreminder.model.User> {
+    -T user
+    -ArrayList<Challange> listChallange
+    -ArrayList<Edukasi> listEdukasi
+    -ArrayList<T> listUser
+    -ChallangeDAO challangeDAO
+    -EdukasiDAO edukasiDAO
+    -UserDAO userDAO
+    -Challange currentChallange
+    -ArrayList<Capaian> capaian
+    -int currentIndexEdukasi
+    +void setCurrentIndexEdukasi(int currentIndexEdukasi)
+    +int getCurrentIndexEdukasi()
+    +Challange getCurrentChallange()
+    +void setCurrentChallange(Challange currentChallange)
+    +Data()
+    +LoginInfo login(TextField emailusername, PasswordField password)
+    +LoginInfo register(TextField nama, TextField email, TextField username, PasswordField password)
+    +void addChallange(TextField nama, TextArea deskripsi, ChoiceBox<String> batas, ChoiceBox<Integer> point)
+    +void editChallange(Challange chal, TextField nama, TextArea deskripsi, ChoiceBox<String> batas, ChoiceBox<Integer> point)
+    +Optional<ButtonType> onGoing()
+    +int getPoint()
+    +void editEducation(Edukasi edukasi, TextField judul, TextArea materi, TextField referensi)
+    +void addEdukasi(TextField judul, TextArea materi, TextField referensi)
+    +void deleteChallange(Challange challange)
+    +void deleteEducation(Edukasi edukasi)
+    -Boolean getUsername(String username)
+    -Boolean getUsernameEmail(String usernameEmail)
+    +String getUsernamePenyusun(UUID id)
+    +void refreshCapaian()
+    +ArrayList<Capaian> getCapaian()
+    -Boolean isAdmin(String username)
+    -Boolean getEmail(String email)
+    +void logout()
+    +void refreshChallange()
+    -void refreshUser()
+    +refreshEdukasi()
+    +ArrayList<Challange> getListChallange()
+    +ArrayList<Edukasi> getListEdukasi()
+    +void setUser(T user)
+    +T getUser()
+}
+class com.remot.langit.ecoreminder.utils.Database {
+    #PreparedStatement st
+    #Connection con
+    #ResultSet res
+    #String dbHost
+    #String dbUsername
+    #String dbPassword
+    #String dbName
+    +Connection getCon()
+    +void testCon()
+    +void close()
+}
+class com.remot.langit.ecoreminder.utils.EdukasiDAO extends com.remot.langit.ecoreminder.utils.Database {
+    +void create()
+    +void update(Edukasi edukasi)
+    +void insert(Edukasi edukasi)
+    +ArrayList<Edukasi> getAll()
+    +void delete(Edukasi edukasi)
+}
+class com.remot.langit.ecoreminder.utils.UserDAO extends com.remot.langit.ecoreminder.utils.Database {
+    +void create()
+    -void insertPoint(UserMember user)
+    -int getPoint(UUID id)
+    +<T extends User> void insert(T user)
+    +<T extends User> T searchById(String id)
+    +<T extends User> ArrayList<T> getAll()
+    +<T extends User> T login(String usernamemail, String password)
+}
+enum com.remot.langit.ecoreminder.utils.LoginInfo {
+    USERNAME_AVAILABLE
+    EMAIL_AVAILABLE
+    SUSPENDED_DATABASE
+    IS_ADMIN
+    IS_USER
+    WRONG_PASSWORD
+    USERNAME_EMAIL_NOT_AVAILABLE
+    FINE
+}
+class java.io.IOException
+class java.net.URL
+class java.sql.SQLException
+class java.sql.Timestamp
+class java.time.LocalDate
+class java.util.ArrayList
+class java.util.Optional
+class java.util.Properties
+class java.util.ResourceBundle
+class java.util.UUID
+class java.util.logging.Level
+class java.util.logging.Logger
+class javafx.application.Application
+class javafx.beans.InvalidationListener
+class javafx.beans.value.ChangeListener
+class javafx.beans.value.ObservableValue
+class javafx.collections.FXCollections
+class javafx.collections.ObservableList
+class javafx.event.EventHandler
+class javafx.fxml.FXMLLoader
+class javafx.geometry.Pos
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.control.Alert
+class javafx.scene.control.Button
+class javafx.scene.control.Label
+class javafx.scene.control.PasswordField
+class javafx.scene.control.ProgressBar
+class javafx.scene.control.ScrollPane
+class javafx.scene.control.TableColumn
+class javafx.scene.control.TableView
+class javafx.scene.control.TextField
+class javafx.scene.control.cell.PropertyValueFactory
+class javafx.scene.input.MouseEvent
+class javafx.scene.layout.AnchorPane
+class javafx.scene.layout.HBox
+class javafx.scene.layout.VBox
+class javafx.scene.shape.StrokeType
+class javafx.scene.text.Font
+class javafx.scene.text.Text
+class javafx.scene.text.TextAlignment
+class javafx.stage.Stage
+class javafx.util.Callback
+interface javafx.fxml.Initializable
+note right of com.remot.langit.ecoreminder.App::setTitle
+  for change title in app
+end note
+note right of com.remot.langit.ecoreminder.App::setRoot
+  for change view fxml in app
+end note
+note right of com.remot.langit.ecoreminder.App::start
+  to start javafx
+end note
+note left of com.remot.langit.ecoreminder.controller.CapaianController::back
+  back to profile
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::getListController
+  (Typo. Should be getListChallange.) To fetch all challange in database
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::edit
+  change input to edit mode
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::delete
+  delete current challange
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::toHome
+  back to home
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::toEducation
+  switch to education
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::submit
+  submit all input to database
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::logout
+  logout from current user
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeController::back
+  back to profile
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeController::start
+  start the challange is selected
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::logout
+  logout from current user
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::toChallange
+  switch to challange
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::toHome
+  back to home
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::edit
+  change input to edit mode
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::delete
+  delete current education
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationAdminController::submit
+  submit all input to database
+end note
+note left of com.remot.langit.ecoreminder.controller.ChallangeAdminController::getEducationTable
+  To fetch all challange in database and put to table
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationController::back
+  back to list education
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationController::prev
+  switch to previous education
+end note
+note left of com.remot.langit.ecoreminder.controller.EducationController::next
+  switch to next education
+end note
+note left of com.remot.langit.ecoreminder.controller.HomeAdminController::toEducation
+  switch to education
+end note
+note left of com.remot.langit.ecoreminder.controller.HomeAdminController::toChallange
+  switch to challange
+end note
+note left of com.remot.langit.ecoreminder.controller.HomeAdminController::logout
+  logout from current user
+end note
+note left of com.remot.langit.ecoreminder.controller.LamanLoginController::toLogin
+  switch to login page
+end note
+note left of com.remot.langit.ecoreminder.controller.ListChallangeController::"get"
+  fetch all challange and put to box in scrollpane
+end note
+note left of com.remot.langit.ecoreminder.controller.ListChallangeController::"back"
+  back to profile page
+end note
+note left of com.remot.langit.ecoreminder.controller.ListChallangeController::"toChallange"
+  switch to challange page with selected challange
+end note
+note left of com.remot.langit.ecoreminder.controller.ListEdukasiController::"getEducationTable"
+  fetch all education on database and put to table
+end note
+note left of com.remot.langit.ecoreminder.controller.ListEdukasiController::"back"
+  back to home
+end note
+note left of com.remot.langit.ecoreminder.controller.ListEdukasiController::"clicItem"
+  when click an item it will be switch to education page
+end note
+note left of com.remot.langit.ecoreminder.controller.LoginController::"toRegister"
+  switch to register page
+end note
+note left of com.remot.langit.ecoreminder.controller.LoginController::"submit"
+  check all input. if all are fine, it will be redirect to profile page
+end note
+note left of com.remot.langit.ecoreminder.controller.ProfileController::"switchChallange"
+  switch to challange list page
+end note
+note left of com.remot.langit.ecoreminder.controller.ProfileController::"switchCapaian"
+  switch to capaian page
+end note
+note left of com.remot.langit.ecoreminder.controller.ProfileController::"logout"
+  logout from current user
+end note
+note left of com.remot.langit.ecoreminder.controller.ProfileController::"switchEdukasi"
+  switch to education list page
+end note
+note left of com.remot.langit.ecoreminder.controller.ProfileController::"switchRewards"
+  switch to rewards page
+end note
+note left of com.remot.langit.ecoreminder.controller.RegisterController::"toLogin"
+  switch to login page
+end note
+note left of com.remot.langit.ecoreminder.controller.RegisterController::"submit"
+  check all input. if all are fine, it will be redirect to profile page
+end note
+note left of com.remot.langit.ecoreminder.controller.RewardsController::"back"
+  back to profile page
+end note
+note left of com.remot.langit.ecoreminder.controller.WelcomeController::"switchToLogin"
+  switch to laman login
+end note
+note left of com.remot.langit.ecoreminder.utils.Database::"close"
+  close all connection
+end note
+com.remot.langit.ecoreminder.App ..> java.lang.Override
+com.remot.langit.ecoreminder.App ..> com.remot.langit.ecoreminder.model.User
+com.remot.langit.ecoreminder.App ..> com.remot.langit.ecoreminder.utils.CapaianDAO
+com.remot.langit.ecoreminder.App ..> com.remot.langit.ecoreminder.utils.Data
+com.remot.langit.ecoreminder.App ..> java.io.IOException
+com.remot.langit.ecoreminder.App --|> javafx.application.Application
+com.remot.langit.ecoreminder.App ..> javafx.fxml.FXMLLoader
+com.remot.langit.ecoreminder.App ..> javafx.scene.Parent
+com.remot.langit.ecoreminder.App ..> javafx.scene.Scene
+com.remot.langit.ecoreminder.App ..> javafx.stage.Stage
+com.remot.langit.ecoreminder.controller.CapaianController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.CapaianController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.CapaianController ..> com.remot.langit.ecoreminder.model.Capaian
+com.remot.langit.ecoreminder.controller.CapaianController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.CapaianController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.CapaianController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.geometry.Pos
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.control.Label
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.control.ProgressBar
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.layout.AnchorPane
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.layout.VBox
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.shape.StrokeType
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.text.Font
+com.remot.langit.ecoreminder.controller.CapaianController ..> javafx.scene.text.Text
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> com.remot.langit.ecoreminder.model.Challange
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.beans.InvalidationListener
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.beans.value.ChangeListener
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.beans.value.ObservableValue
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.collections.FXCollections
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.collections.ObservableList
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.event.EventHandler
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.geometry.Pos
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.scene.control.cell.PropertyValueFactory
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.scene.layout.HBox
+com.remot.langit.ecoreminder.controller.ChallangeAdminController ..> javafx.util.Callback
+com.remot.langit.ecoreminder.controller.ChallangeController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.ChallangeController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.ChallangeController ..> com.remot.langit.ecoreminder.model.UserMember
+com.remot.langit.ecoreminder.controller.ChallangeController ..> com.remot.langit.ecoreminder.utils.CapaianDAO
+com.remot.langit.ecoreminder.controller.ChallangeController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.ChallangeController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.ChallangeController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.ChallangeController ..> javafx.scene.control.Alert
+com.remot.langit.ecoreminder.controller.ChallangeController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.ChallangeController ..> javafx.scene.text.Text
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> com.remot.langit.ecoreminder.model.Edukasi
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.beans.InvalidationListener
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.beans.value.ChangeListener
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.beans.value.ObservableValue
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.collections.FXCollections
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.collections.ObservableList
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.geometry.Pos
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.scene.control.cell.PropertyValueFactory
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.EducationAdminController ..> javafx.scene.layout.HBox
+com.remot.langit.ecoreminder.controller.EducationController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.EducationController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.EducationController ..> com.remot.langit.ecoreminder.model.Edukasi
+com.remot.langit.ecoreminder.controller.EducationController ..> com.remot.langit.ecoreminder.utils.UserDAO
+com.remot.langit.ecoreminder.controller.EducationController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.EducationController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.EducationController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.EducationController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.EducationController ..> javafx.scene.text.Text
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> javafx.scene.control.Label
+com.remot.langit.ecoreminder.controller.HomeAdminController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.HomeAdminController --|> javafx.fxml.Initializable
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> javafx.fxml.FXML
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> javafx.scene.control.Button
+com.remot.langit.ecoreminder.controller.LamanLoginController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> com.remot.langit.ecoreminder.model.Challange
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.event.EventHandler
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.geometry.Pos
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.control.ScrollPane
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.layout.VBox
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.shape.StrokeType
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.text.Text
+com.remot.langit.ecoreminder.controller.ListChallangeController ..> javafx.scene.text.TextAlignment
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> com.remot.langit.ecoreminder.model.Edukasi
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.collections.FXCollections
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.collections.ObservableList
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.scene.control.TableColumn
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.scene.control.TableView
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.scene.control.cell.PropertyValueFactory
+com.remot.langit.ecoreminder.controller.ListEdukasiController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.LoginController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.LoginController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.LoginController ..> com.remot.langit.ecoreminder.model.UserAdmin
+com.remot.langit.ecoreminder.controller.LoginController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.LoginController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.LoginController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.LoginController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.LoginController ..> com.remot.langit.ecoreminder.utils.LoginInfo
+com.remot.langit.ecoreminder.controller.ProfileController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.ProfileController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.ProfileController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.ProfileController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.ProfileController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.ProfileController ..> javafx.scene.control.Label
+com.remot.langit.ecoreminder.controller.ProfileController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.RegisterController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.RegisterController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.RegisterController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.RegisterController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.RegisterController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.RegisterController ..> javafx.scene.control.Alert
+com.remot.langit.ecoreminder.controller.RegisterController ..> javafx.scene.control.PasswordField
+com.remot.langit.ecoreminder.controller.RegisterController ..> javafx.scene.control.TextField
+com.remot.langit.ecoreminder.controller.RegisterController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.RegisterController ..> com.remot.langit.ecoreminder.utils.LoginInfo
+com.remot.langit.ecoreminder.controller.RewardsController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.RewardsController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.RewardsController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.RewardsController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.RewardsController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.RewardsController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.RewardsController ..> javafx.scene.text.Text
+com.remot.langit.ecoreminder.controller.RewardsController --|> javafx.fxml.Initializable
+com.remot.langit.ecoreminder.controller.WelcomeController ..> java.lang.Override
+com.remot.langit.ecoreminder.controller.WelcomeController ..> javafx.fxml.FXML
+com.remot.langit.ecoreminder.controller.WelcomeController ..> com.remot.langit.ecoreminder.App
+com.remot.langit.ecoreminder.controller.WelcomeController ..> java.io.IOException
+com.remot.langit.ecoreminder.controller.WelcomeController ..> java.net.URL
+com.remot.langit.ecoreminder.controller.WelcomeController ..> java.util.ResourceBundle
+com.remot.langit.ecoreminder.controller.WelcomeController ..> javafx.scene.input.MouseEvent
+com.remot.langit.ecoreminder.controller.WelcomeController ..> javafx.scene.layout.AnchorPane
+com.remot.langit.ecoreminder.model.Capaian ..> java.sql.Timestamp
+com.remot.langit.ecoreminder.model.Capaian ..> java.util.ArrayList
+com.remot.langit.ecoreminder.model.Challange ..> java.time.LocalDate
+com.remot.langit.ecoreminder.model.Challange ..> java.util.UUID
+com.remot.langit.ecoreminder.model.Edukasi ..> java.util.UUID
+com.remot.langit.ecoreminder.model.User ..> java.util.UUID
+com.remot.langit.ecoreminder.model.UserAdmin ..> java.util.UUID
+com.remot.langit.ecoreminder.model.UserMember ..> com.remot.langit.ecoreminder.utils.CapaianDAO
+com.remot.langit.ecoreminder.model.UserMember ..> java.util.UUID
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> com.remot.langit.ecoreminder.model.Capaian
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> com.remot.langit.ecoreminder.model.Challange
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> com.remot.langit.ecoreminder.model.UserMember
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> java.sql.SQLException
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> java.util.ArrayList
+com.remot.langit.ecoreminder.utils.CapaianDAO ..> java.util.UUID
+com.remot.langit.ecoreminder.utils.ChallangeDAO ..> com.remot.langit.ecoreminder.model.Challange
+com.remot.langit.ecoreminder.utils.ChallangeDAO ..> com.remot.langit.ecoreminder.model.UserMember
+com.remot.langit.ecoreminder.utils.ChallangeDAO ..> java.sql.SQLException
+com.remot.langit.ecoreminder.utils.ChallangeDAO ..> java.util.ArrayList
+com.remot.langit.ecoreminder.utils.ChallangeDAO ..> java.util.UUID
+com.remot.langit.ecoreminder.utils.Data ..> java.util.ArrayList
+com.remot.langit.ecoreminder.utils.Data ..> java.util.Optional
+com.remot.langit.ecoreminder.utils.Data ..> java.util.UUID
+com.remot.langit.ecoreminder.utils.Data ..> com.remot.langit.ecoreminder.utils.LoginInfo
+com.remot.langit.ecoreminder.utils.Database ..> java.util.Properties
+com.remot.langit.ecoreminder.utils.Database ..> java.util.logging.Level
+com.remot.langit.ecoreminder.utils.Database ..> java.util.logging.Logger
+com.remot.langit.ecoreminder.utils.EdukasiDAO ..> com.remot.langit.ecoreminder.model.Edukasi
+com.remot.langit.ecoreminder.utils.EdukasiDAO ..> java.sql.SQLException
+com.remot.langit.ecoreminder.utils.EdukasiDAO ..> java.util.ArrayList
+com.remot.langit.ecoreminder.utils.EdukasiDAO ..> java.util.UUID
+com.remot.langit.ecoreminder.utils.UserDAO ..> com.remot.langit.ecoreminder.model.User
+com.remot.langit.ecoreminder.utils.UserDAO ..> com.remot.langit.ecoreminder.model.UserAdmin
+com.remot.langit.ecoreminder.utils.UserDAO ..> com.remot.langit.ecoreminder.model.UserMember
+com.remot.langit.ecoreminder.utils.UserDAO ..> java.sql.SQLException
+com.remot.langit.ecoreminder.utils.UserDAO ..> java.util.ArrayList
+com.remot.langit.ecoreminder.utils.UserDAO ..> java.util.UUID
+@enduml

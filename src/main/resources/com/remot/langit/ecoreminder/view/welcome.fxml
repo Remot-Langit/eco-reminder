@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="coba" onMouseClicked="#switchToLogin" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #65962C;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.remot.langit.ecoreminder.controller.WelcomeController">
+   <children>
+      <AnchorPane layoutX="62.0" layoutY="54.0" prefHeight="293.0" prefWidth="477.0" style="-fx-background-color: #EDFFC8; -fx-background-radius: 15px;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="139.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="127.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="judul" text="Eco-Reminder">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="116.0" fitWidth="200.0" layoutX="399.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/awan.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="200.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/awan.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

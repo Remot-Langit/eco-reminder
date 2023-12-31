@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #65962C;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.remot.langit.ecoreminder.controller.ListChallangeController">
+    <stylesheets>
+        <URL value="@../style.css" />
+    </stylesheets>
+    <children>
+        <ImageView fitHeight="61.0" fitWidth="117.0" layoutX="490.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+            <image>
+                <Image url="@../img/awan.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="61.0" fitWidth="118.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/awan.png" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="212.0" layoutY="12.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
+            <children>
+                <Text fill="WHITE" layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Challenge">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="63.0" stylesheets="@../style.css">
+         <children>
+            <ScrollPane fx:id="containerList" hbarPolicy="NEVER" layoutX="3.0" layoutY="7.0" prefHeight="286.0" prefWidth="493.0" styleClass="white" stylesheets="@../style.css">
+               <content>
+                  <VBox fx:id="box" prefHeight="63.0" prefWidth="477.0" style="-fx-spacing: 3px;">
+                     <padding>
+                        <Insets bottom="3.0" left="2.0" right="2.0" top="3.0" />
+                     </padding></VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <styleClass>
+            <String fx:value="border-radius" />
+            <String fx:value="white" />
+            <String fx:value="rounded" />
+         </styleClass>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </AnchorPane>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="3.0" layoutY="4.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/arrow.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

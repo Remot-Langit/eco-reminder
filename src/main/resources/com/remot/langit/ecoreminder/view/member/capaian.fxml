@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #65962C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.remot.langit.ecoreminder.controller.CapaianController">
+    <children>
+        <AnchorPane layoutX="62.0" layoutY="71.0" prefHeight="276.0" prefWidth="478.0" style="-fx-background-color: #dbdbdb; -fx-background-radius: 10;">
+            <children>
+                <Text fill="#0d0d0d" layoutX="9.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress" />
+            <Text fill="#0d0d0d" layoutX="9.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finish" wrappingWidth="30.345703125" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="33.0" pickOnBounds="false" prefHeight="105.0" prefWidth="457.0" vbarPolicy="NEVER">
+               <content>
+                  <VBox fx:id="progresslist" prefHeight="65.0" prefWidth="456.0" spacing="5.0" style="-fx-spacing: 5px;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <AnchorPane prefHeight="44.0" prefWidth="407.0" style="-fx-background-radius: 6px; -fx-border-radius: 6px; -fx-border-color: grey; -fx-background-color: white;">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" layoutX="330.0" layoutY="2.0" prefHeight="39.0" prefWidth="91.0">
+                                 <children>
+                                    <ProgressBar prefHeight="18.0" prefWidth="99.0" progress="0.77" />
+                                    <Label text="2 hari lagi">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="9.0" layoutY="2.0" prefHeight="39.0" prefWidth="291.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Memakan rumput 2 kali semalam" wrappingWidth="294.29425048828125">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="154.0" pickOnBounds="false" prefHeight="105.0" prefWidth="457.0" vbarPolicy="NEVER">
+               <content>
+                  <VBox fx:id="finishList" prefHeight="65.0" prefWidth="456.0" spacing="5.0" style="-fx-spacing: 5px;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <AnchorPane prefHeight="44.0" prefWidth="407.0" style="-fx-background-radius: 6px; -fx-border-radius: 6px; -fx-border-color: grey; -fx-background-color: white;">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" layoutX="320.0" layoutY="2.0" prefHeight="39.0" prefWidth="112.0">
+                                 <children>
+                                        <AnchorPane prefHeight="22.0" prefWidth="123.0" style="-fx-background-color: #ffa500; -fx-background-radius: 10px;">
+                                            <children>
+                                                <Label layoutX="11.0" layoutY="2.0" text="Challange selesai" />
+                                            </children>
+                                        </AnchorPane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="9.0" layoutY="2.0" prefHeight="39.0" prefWidth="291.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Memakan rumput 2 kali semalam" wrappingWidth="294.29425048828125">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="208.0" layoutY="14.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #9ab496; -fx-background-radius: 15PX;">
+            <children>
+                <Text fill="WHITE" layoutX="64.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capaian">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="7.0" layoutY="8.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/arrow.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
