@@ -8,7 +8,7 @@ Members of Group:
 - Sri Rahayu
 
 ## ERD
-![ERD Picture](./erd.png)
+![ERD Picture](https://raw.githubusercontent.com/Remot-Langit/eco-reminder/main/erd.png)
 ## Class Diagram
 ![Class Diagram Picture](https://raw.githubusercontent.com/Remot-Langit/eco-reminder/main/class-diagram.svg)
 
