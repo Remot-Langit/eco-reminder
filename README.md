@@ -24,7 +24,7 @@ You can open this project from netbeans or intellij. Make sure the jdk in your c
 
 ## Alternative Run
 If your laptop is a potato, maybe you can use this method. 
-- Download the [latest release](https://github.com/Remot-Langit/eco-reminder/releases/download/release/eco-reminder-1.0.zip).
+- Download the [latest release](https://github.com/Remot-Langit/eco-reminder/releases/download/release/eco-reminder-1.0.0.zip).
 - After downloading, extract it to any folder.
 - Right-click on the folder that extract and open in terminal.
 - Download the javafx library, then extract the javafx to any folder.
